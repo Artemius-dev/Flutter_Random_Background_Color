@@ -1,4 +1,4 @@
-# random_background_color
+# Random Background
 
 Random Background Flutter project
 
