@@ -21,10 +21,8 @@ class _RandomScreenColorState extends State<RandomScreenColor> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // https://stackoverflow.com/questions/58232078/how-to-change-the-color-of-text-dynamically-in-flutter
         setState(() => backgroundColor =
-            Color((Random().nextDouble() * 0xFFFFFF).toInt() << 0)
-                .withOpacity(1.0)); // this is generate random color
+            Colors.primaries[Random().nextInt(Colors.primaries.length)]);
       },
       child: Scaffold(
         backgroundColor: backgroundColor,
